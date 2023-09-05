@@ -18,7 +18,7 @@ This is a code refactor project. The app was built with a RESTful API, and is re
 
 ## Link
 
-Page published at 
+Page published at https://safe-refuge-55999-8c25ae1dbecb.herokuapp.com/
 
 ## Screenshot
 
