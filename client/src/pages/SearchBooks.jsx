@@ -30,7 +30,7 @@ const SearchBooks = () => {
   });
 
   // use Apollo useMutation hook to execute SAVE_BOOK
-  const [saveBook] = useMutation(SAVE_BOOK)
+  const [saveBook, { error }] = useMutation(SAVE_BOOK)
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
@@ -80,6 +80,10 @@ const SearchBooks = () => {
       await saveBook({
         variables: bookToSave
       });
+
+      if (error) {
+        console.log(error);
+      }
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
